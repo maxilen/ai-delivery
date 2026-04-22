@@ -6,6 +6,14 @@
 
 ---
 
+## About Me
+
+I am a 20+ year HR professional in the internet industry with zero technical background. Everything I know about technology comes from working alongside engineering teams and picking things up along the way.
+
+Technical professionals can ignore this repo. But if you are a non-technical person like me, every word here is written in the simplest language I know.
+
+---
+
 ## Who is this for?
 
 This repo is for people who:
@@ -23,82 +31,114 @@ This repo is for people who:
 - A personal website or blog
 - A small web app (e.g., an expense tracker, a habit tracker)
 - A tool to automate repetitive tasks on your computer
-- A simple chatbot or automation workflow
+- A simple AI-powered assistant for your work
+- A data processing or report generation tool
 
 ---
 
 ## What do you need?
 
-1. **A clear idea** — what you want to build, even in plain words
-2. **Claude Code** — a free AI coding tool from Anthropic
-3. **A computer** — Mac, Windows, or Linux
+1. **A clear idea of what you want** — You don't need technical details. "I want a website where I can track my expenses" is enough.
+2. **Claude Code** — A free AI tool from Anthropic. Download at [code.claude.com](https://code.claude.com).
+3. **A computer** — Mac, Windows, or Linux. That's it.
 
 ---
 
 ## How does it work?
 
-```
-You describe what you want
-        ↓
-AI creates a development plan (in plain words)
-        ↓
-You review and approve
-        ↓
-AI builds and tests, step by step
-        ↓
-You verify the result — if something is wrong, AI fixes it
-        ↓
-Delivery (or a list of decisions you need to make)
-```
+**Step 1 — Download the skill**
 
----
-
-## Skills available
-
-| Skill | What it does |
-|-------|-------------|
-| `dev-delivery` | Guides AI through the full cycle: understand → plan → build → test → deliver |
-
----
-
-## How to use
-
-**Step 1:** Download Claude Code from [claude.ai/code](https://claude.ai/code) (free)
-
-**Step 2:** In your project folder, run:
 ```bash
-git clone https://github.com/maxilen/ai-delivery.git ./.claude/
+git clone https://github.com/maxilen/ai-delivery.git
 ```
 
-**Step 3:** Tell Claude Code:
-> "Use the dev-delivery skill to help me build [your idea]"
+Place the skill file into your project folder:
 
-Claude will take it from there.
+```bash
+# If you already have a project folder:
+cp ai-delivery/.claude/skills/dev-delivery.md /your-project/.claude/skills/
+
+# If you are starting from scratch, just keep the skills folder in your project:
+cp -r ai-delivery/.claude /your-new-project/
+```
+
+**Step 2 — Tell Claude Code what you want**
+
+Open Claude Code in your project folder and say something like:
+
+```
+Use the dev-delivery skill to help me build [your idea]
+```
+
+Claude Code will load the skill, understand your project, create a development plan, execute it, test it, and deliver the result.
 
 ---
 
-## FAQ
+## What does the workflow look like?
 
-**Q: Do I need to know how to code?**
-No. You describe what you want in plain language.
+The skill breaks everything into small steps:
 
-**Q: What if I want to change something midway?**
-Just say so. AI will adjust and keep going.
+1. **Understand your project** — Claude reads your files and understands what you already have
+2. **Make a plan** — Breaks the work into the smallest possible pieces, plans how to test each piece
+3. **Build step by step** — Works through each piece, tests as it goes
+4. **Integration testing** — When pieces are combined, runs regression tests
+5. **Deliver or pause for decisions** — If something needs your input, it clearly lists your options and waits
 
-**Q: What if the project gets stuck?**
-AI will give you a list of things to decide. You make the call, then AI continues.
-
-**Q: What if it doesn't work?**
-You can always try again or describe the problem differently. AI will attempt to fix it.
+You can pause at any time, think, change your mind, and tell Claude to continue. The skill keeps track of where you left off.
 
 ---
 
-## Directory
+## Do you need to understand technology?
+
+No. You just describe what you want. Claude Code with this skill handles all the technical work.
+
+However, you do make decisions. For example:
+- "I like option A better" — or —
+- "This doesn't feel right, can we change it?"
+
+These decisions are part of the creative process, not the technical process.
+
+---
+
+## Can I change my mind mid-project?
+
+Yes. That's normal and expected.
+
+Just say things like:
+- "I want to add a feature: ..."
+- "Actually, can we change X to Y?"
+- "The current result is good, but I need it to do Z instead"
+
+The skill keeps track of your project state and continues from where you left off.
+
+---
+
+## What if I get stuck?
+
+The skill will tell you exactly what it needs from you, in plain language. For example:
+
+```
+I need your input on two things:
+
+1. Should the login use email or phone number?
+   - Option A: Email (more professional)
+   - Option B: Phone number (faster for users)
+
+2. Should we store data locally or in the cloud?
+   - Option A: Local (free, private, but only accessible on this device)
+   - Option B: Cloud (accessible anywhere, but requires an account)
+```
+
+You just pick an option and the work continues.
+
+---
+
+## Directory structure
 
 ```
 ai-delivery/
-├── README.md          ← English (you are here)
-├── README_zh.md       ← 中文完整版
+├── README.md             ← English (you are here)
+├── README_zh.md          ← 中文完整版
 └── .claude/
     └── skills/
         └── dev-delivery.md
