@@ -1,70 +1,104 @@
 # ai-delivery
 
-A collection of skills for non-technical people to build real software projects using AI.
+[**中文说明**](README_zh.md)
 
-No coding knowledge required. All you need is a clear idea of what you want to build.
-
----
-
-## Skills
-
-### dev-delivery
-
-AI-driven complete development workflow — from understanding your project to writing a granular development + testing plan, executing it, running regression tests, and delivering real results. Can pause mid-project for your decisions and resume after.
-
-→ [中文版说明](README_zh.md)
+*A collection of skills for non-technical people to build real software projects using AI.*
 
 ---
 
-## For Non-Technical Users
+## Who is this for?
 
-You don't need to know how to code. You only need to know what you want.
+This repo is for people who:
 
-1. Get Claude Code (free)
-2. Download a skill from this repo
-3. Tell the AI what you want to build
-4. The AI does the rest
+- Have an idea for an app, website, or tool
+- Don't know how to code
+- Want to get something built without spending months learning to program
 
-### Example things you can build
-
-- A simple website
-- A small tool to rename files in batch
-- A personal expense tracker
-- Any idea you can describe in plain language
-
-### Workflow
-
-1. **Tell the AI** what you want to build
-2. **AI explores** your project and writes a development + testing plan
-3. **AI develops** piece by piece, testing each piece as it goes
-4. **AI integrates** all pieces and runs regression tests
-5. **You verify** the final result
-
-### Can I change my mind halfway?
-
-Yes. Say "I want to change X" at any time and the AI will adjust.
-
-### What if the project gets stuck?
-
-The AI will give you a clear list of decisions needed, with pros and cons for each option. You choose, and the AI continues.
+> **Note for developers:** The skills here are written for non-technical users. If you are a developer, you can directly use the `.claude/skills/dev-delivery.md` file in your own projects.
 
 ---
 
-## For Technical Users
+## What can you build?
 
-This repo is written for non-technical people by a non-technical person. If you're a developer looking for AI coding workflows, you may prefer:
-
-- [claude-code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic's official CLI agent docs
-- Skills in this repo are designed as plain-language prompts, not technical references
+- A personal website or blog
+- A small web app (e.g., an expense tracker, a habit tracker)
+- A tool to automate repetitive tasks on your computer
+- A simple chatbot or automation workflow
 
 ---
 
-## Repo Structure
+## What do you need?
+
+1. **A clear idea** — what you want to build, even in plain words
+2. **Claude Code** — a free AI coding tool from Anthropic
+3. **A computer** — Mac, Windows, or Linux
+
+---
+
+## How does it work?
+
+```
+You describe what you want
+        ↓
+AI creates a development plan (in plain words)
+        ↓
+You review and approve
+        ↓
+AI builds and tests, step by step
+        ↓
+You verify the result — if something is wrong, AI fixes it
+        ↓
+Delivery (or a list of decisions you need to make)
+```
+
+---
+
+## Skills available
+
+| Skill | What it does |
+|-------|-------------|
+| `dev-delivery` | Guides AI through the full cycle: understand → plan → build → test → deliver |
+
+---
+
+## How to use
+
+**Step 1:** Download Claude Code from [claude.ai/code](https://claude.ai/code) (free)
+
+**Step 2:** In your project folder, run:
+```bash
+git clone https://github.com/maxilen/ai-delivery.git ./.claude/
+```
+
+**Step 3:** Tell Claude Code:
+> "Use the dev-delivery skill to help me build [your idea]"
+
+Claude will take it from there.
+
+---
+
+## FAQ
+
+**Q: Do I need to know how to code?**
+No. You describe what you want in plain language.
+
+**Q: What if I want to change something midway?**
+Just say so. AI will adjust and keep going.
+
+**Q: What if the project gets stuck?**
+AI will give you a list of things to decide. You make the call, then AI continues.
+
+**Q: What if it doesn't work?**
+You can always try again or describe the problem differently. AI will attempt to fix it.
+
+---
+
+## Directory
 
 ```
 ai-delivery/
-├── README.md          ← You are here
-├── README_zh.md       ← 中文版
+├── README.md          ← English (you are here)
+├── README_zh.md       ← 中文完整版
 └── .claude/
     └── skills/
         └── dev-delivery.md
